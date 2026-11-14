@@ -4,7 +4,7 @@
 
 **Code:** https://github.com/surya-gorla/t3code/tree/fix/claude-expired-wake-limit
 
-**Verified commit:** 93442614dee8fc5b0396af1b1d2a8f99c82c4683
+**Verified commit:** 850516a7c629561e198b3b51eef1ac33901a1d9f
 
 This evidence is deliberately on a separate fork branch and must NOT be merged into
 the upstream code PR. Synthetic test data and log paths have been sanitized.
@@ -15,12 +15,12 @@ the upstream code PR. Synthetic test data and log paths have been sanitized.
   continuation (logs/stale-replay-red.log).
 - Before the arrival-time guard: a new 429 that arrives after its reported reset
   is mistakenly swallowed (logs/red-fresh-rejection.log).
-- Final: all 15 targeted cases pass; reset at exact boundary or 1 ms before,
+- Final: all 18 targeted cases pass; reset at exact boundary or 1 ms before,
   independently reported and embedded reset times, successful intervening turn,
   fresh 429 and already expired buffered 429. Token usage retained.
 - Final 'vp run check:changed --concurrency 2' after fetching origin/main 5958d00ed (comparison merge base 5e06246):
-  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 431 selected
-  tests in 2 files passed. See logs/review-open-root-check-changed.log.
+  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 434 selected
+  tests in 2 files passed. See logs/review-current-check-changed.log.
 - A hypothetical second buffered successful wake passed on both original code
   and the fix, so the temporary duplicate regression was removed; logs retained.
 - Related PR #22998 edits this adapter's replay selection. A read-only merge-tree
@@ -77,3 +77,27 @@ https://github.com/pingdotgg/t3code/pull/36592.
   selected tests across two files passed on the contributor branch.
 - The fix was pushed to existing upstream PR #36592 as commit 93442614d.
   GitHub CI and human review remain independent merge gates.
+
+## Two additional review findings — absorbed root and all expired usage
+
+- CodeRabbit flagged that a newer root absorbed by an ordinary user turn
+  cannot emit its own result, yet the previous open-root guard returned
+  without settling. Two table cases reproduced the stuck continuation with
+  and without an intervening empty lifecycle result.
+- CodeRabbit also flagged that only the last of several expired buffered 429s
+  was retained in usage accounting. One test used distinct 2/3 and 4/5
+  token results, followed by a normal 7/11 token result; before the fix,
+  input was 11 rather than the correct 13.
+- red-review-both.log contains all three failing tests on preceding
+  commit 93442614d. green-review-both-final.log contains 18/18 passing
+  targeted cases after the correction.
+- The fix retains charged usage for every expired result exactly once, but
+  excludes the selected result when the finalizer will already count it.
+  It settles an absorbed root by its final older result, rather than waiting
+  forever or misattributing a new result.
+- review-current-check-changed.log: repository-prescribed checks all
+  passed (format, lint, 2 Knip checks, GraphQL, 3 affected package typechecks
+  and **434/434 selected tests over two files**).
+- Existing upstream PR #36592 head: 850516a7c629561e198b3b51eef1ac33901a1d9f.
+  The two findings' inline threads have been resolved on GitHub. CI and
+  maintainer review remain separate approval gates.
