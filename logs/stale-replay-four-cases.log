@@ -1,0 +1,9 @@
+
+ RUN  v5.0.5 <HOME>/Documents/Opensource Space/t3code-36405/repo/apps/server
+
+ ✓ src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts (415 tests | 411 skipped) 34ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed | 411 skipped (415)
+   Start at  09:54:45
+   Duration  1.42s (transform 47%, import 47%, setup 3%, tests 2%)
