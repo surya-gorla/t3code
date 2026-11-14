@@ -4,7 +4,7 @@
 
 **Code:** https://github.com/surya-gorla/t3code/tree/fix/claude-expired-wake-limit
 
-**Verified commit:** e9e89eada1c66f851c7214fc8be2eb2612b57d3d
+**Verified commit:** 476021044a8e24ca311e417b3924e28120a9152b
 
 This evidence is deliberately on a separate fork branch and must NOT be merged into
 the upstream code PR. Synthetic test data and log paths have been sanitized.
@@ -18,8 +18,8 @@ the upstream code PR. Synthetic test data and log paths have been sanitized.
 - Final: all 8 targeted cases pass; reset at exact boundary or 1 ms before,
   independently reported and embedded reset times, successful intervening turn,
   fresh 429 and already expired buffered 429. Token usage retained.
-- Final 'vp run check:changed --concurrency 2' on upstream main 62ba72fa:
-  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 421 selected
+- Final 'vp run check:changed --concurrency 2' on upstream main a8777e4c:
+  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 424 selected
   tests in 2 files passed. See logs/check-changed-rebased-guard.log.
 - A hypothetical second buffered successful wake passed on both original code
   and the fix, so the temporary duplicate regression was removed; logs retained.
