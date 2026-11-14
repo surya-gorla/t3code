@@ -18,7 +18,7 @@ the upstream code PR. Synthetic test data and log paths have been sanitized.
 - Final: all 15 targeted cases pass; reset at exact boundary or 1 ms before,
   independently reported and embedded reset times, successful intervening turn,
   fresh 429 and already expired buffered 429. Token usage retained.
-- Final 'vp run check:changed --concurrency 2' against origin/main e4688f7 (merge base 5e06246):
+- Final 'vp run check:changed --concurrency 2' after fetching origin/main 5958d00ed (comparison merge base 5e06246):
   formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 431 selected
   tests in 2 files passed. See logs/review-open-root-check-changed.log.
 - A hypothetical second buffered successful wake passed on both original code
@@ -52,9 +52,9 @@ merge approval remains with the maintainers.
   Follow-up commit af0879d23 ignores those metadata as a blocking reset,
   but retains real 429 failures when no blocking reset is independently known.
   review-overage-green.log passes 13/13 targeted cases.
-- review-overage-check-changed.log: final vp run check:changed reports format,
+- review-overage-check-changed.log: prior vp run check:changed reports format,
   lint, both Knip checks, GraphQL, 3 affected package typechecks, and
-  **431/431 selected tests passed**.
+  **429/429 selected tests passed** at that earlier commit.
 
 Evidence is stored only in the contributor fork. Upstream PR:
 https://github.com/pingdotgg/t3code/pull/36592.
