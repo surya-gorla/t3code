@@ -23,9 +23,11 @@ the upstream code PR. Synthetic test data and log paths have been sanitized.
   tests in 2 files passed. See logs/check-changed-rebased-guard.log.
 - A hypothetical second buffered successful wake passed on both original code
   and the fix, so the temporary duplicate regression was removed; logs retained.
-- Local direct merge check with open PR #22998 could not establish a merge base
-  because this checkout is shallow. Their PR touches the same server adapter and
-  test file; no conflict-free integration claim.
+- Related PR #22998 edits this adapter's replay selection. A read-only merge-tree
+  using its published base found two textual conflicts. A disposable combined
+  integration probe exposed failures in earlier-wake failure-notice handling;
+  this is not part of the standalone fix, and the branches cannot currently be
+  considered integration-tested together. Rebase and re-verify if #22998 lands.
 
 ## Reproduce
 
