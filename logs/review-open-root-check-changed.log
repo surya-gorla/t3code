@@ -1,0 +1,2034 @@
+$ node scripts/check-changed.ts --concurrency 2 ⊘ cache disabled
+check:changed: 2 files since 5e06246d24b0 (origin/main)
+
+> vp format  pass  0.2s
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 102ms on 2 files using 10 threads.
+
+> vp lint  pass  0.5s
+Found 0 warnings and 0 errors.
+Finished in 393ms on 2 files with 202 rules using 10 threads.
+
+> vp knip 1/2  pass  6.0s
+
+> vp graphql (apps/server)  pass  0.4s
+~/apps/server$ graphqlgen --check ⊘ cache disabled
+
+> vp knip 2/2  pass  10.0s
+
+> vp typecheck (3 packages)  pass  4.9s
+~/scripts$ effect-tsgo tsrs --noEmit ◉ cache hit, replaying
+build-cli-archive.ts:66:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+66 export class CliArchiveLinuxArm64PageError extends Schema.TaggedError<CliArchiveLinuxArm64PageError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-cli-archive.ts:75:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+75 export class CliArchiveCommandFailedError extends Schema.TaggedError<CliArchiveCommandFailedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-cli-archive.ts:84:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+84 export class CliArchiveInputMissingError extends Schema.TaggedError<CliArchiveInputMissingError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-cli-archive.ts:334:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+334 export class CliArchiveNotarizationRejectedError extends Schema.TaggedError<CliArchiveNotarizationRejectedError>()(
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:210:87 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+210 export class MacPasskeySigningConfigurationResolutionError extends Schema.TaggedError<MacPasskeySigningConfigurationResolutionError>()(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:229:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+229 export class KeyringNativePackageMissingError extends Schema.TaggedError<KeyringNativePackageMissingError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:245:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+245 export class ClerkPasskeyNativePackageMissingError extends Schema.TaggedError<ClerkPasskeyNativePackageMissingError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:261:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+261 export class UnsupportedHostBuildPlatformError extends Schema.TaggedError<UnsupportedHostBuildPlatformError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:272:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+272 export class UnsupportedDesktopBuildArchitectureError extends Schema.TaggedError<UnsupportedDesktopBuildArchitectureError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:291:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+291 export class InvalidMockUpdateServerPortError extends Schema.TaggedError<InvalidMockUpdateServerPortError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:312:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+312 export class DesktopBuildManifestRestoreError extends Schema.TaggedError<DesktopBuildManifestRestoreError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:321:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+321 export class BuildCommandFailedError extends Schema.TaggedError<BuildCommandFailedError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:354:84 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+354 export class LinuxDesktopBuildPrerequisitesMissingError extends Schema.TaggedError<LinuxDesktopBuildPrerequisitesMissingError>()(
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:401:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+401 export class MacDesktopBuildPrerequisitesMissingError extends Schema.TaggedError<MacDesktopBuildPrerequisitesMissingError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:438:86 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+438 export class WindowsDesktopBuildPrerequisitesMissingError extends Schema.TaggedError<WindowsDesktopBuildPrerequisitesMissingError>()(
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:465:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+465 export class ResourceMonitorBuildOutputMissingError extends Schema.TaggedError<ResourceMonitorBuildOutputMissingError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:485:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+485 export class LinuxBrowserSecretHostError extends Schema.TaggedError<LinuxBrowserSecretHostError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:494:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+494 export class DesktopIconSourceMissingError extends Schema.TaggedError<DesktopIconSourceMissingError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:506:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+506 export class DesktopDmgBackgroundSourceMissingError extends Schema.TaggedError<DesktopDmgBackgroundSourceMissingError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:518:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+518 export class BundledClientAssetsMissingError extends Schema.TaggedError<BundledClientAssetsMissingError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:532:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+532 export class UnsupportedDesktopBuildPlatformError extends Schema.TaggedError<UnsupportedDesktopBuildPlatformError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:554:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+554 export class DesktopBuildDependencyResolutionError extends Schema.TaggedError<DesktopBuildDependencyResolutionError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:567:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+567 export class MissingServerProductionDependenciesError extends Schema.TaggedError<MissingServerProductionDependenciesError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:615:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+615 export class ExternalizedBundleError extends Schema.TaggedError<ExternalizedBundleError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:624:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+624 export class BundleNotSelfContainedError extends Schema.TaggedError<BundleNotSelfContainedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:634:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+634 export class InlinedNativePackageError extends Schema.TaggedError<InlinedNativePackageError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:643:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+643 export class InlinedExternalPackageError extends Schema.TaggedError<InlinedExternalPackageError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:652:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+652 export class MissingDesktopBuildInputError extends Schema.TaggedError<MissingDesktopBuildInputError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:665:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+665 export class MacProvisioningProfileNotFoundError extends Schema.TaggedError<MacProvisioningProfileNotFoundError>()(
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:676:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+676 export class DesktopBuildDistDirectoryMissingError extends Schema.TaggedError<DesktopBuildDistDirectoryMissingError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:689:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+689 export class DesktopBuildArtifactCopyError extends Schema.TaggedError<DesktopBuildArtifactCopyError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:698:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+698 export class DesktopBuildNoArtifactsProducedError extends Schema.TaggedError<DesktopBuildNoArtifactsProducedError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:711:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+711 export class WslRuntimeArchiveMissingError extends Schema.TaggedError<WslRuntimeArchiveMissingError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:722:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+722 export class WindowsServerSidecarPackError extends Schema.TaggedError<WindowsServerSidecarPackError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:734:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+734 export class WindowsPrimaryNativeProbeError extends Schema.TaggedError<WindowsPrimaryNativeProbeError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:758:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+758 export class WindowsPackagedPayloadValidationError extends Schema.TaggedError<WindowsPackagedPayloadValidationError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:795:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+795 export class LinuxIconResizeError extends Schema.TaggedError<LinuxIconResizeError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1143:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1143 export class InvalidMacPasskeyRpDomainError extends Schema.TaggedError<InvalidMacPasskeyRpDomainError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1156:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1156 export class InvalidAppleTeamIdError extends Schema.TaggedError<InvalidAppleTeamIdError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1167:83 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1167 export class MissingMacPasskeyProvisioningProfileError extends Schema.TaggedError<MissingMacPasskeyProvisioningProfileError>()(
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1176:83 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1176 export class MissingMacPasskeyDomainConfigurationError extends Schema.TaggedError<MissingMacPasskeyDomainConfigurationError>()(
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1185:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1185 export class InvalidMacPasskeyPublishableKeyError extends Schema.TaggedError<InvalidMacPasskeyPublishableKeyError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1196:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1196 export class MissingMacPasskeyRpDomainError extends Schema.TaggedError<MissingMacPasskeyRpDomainError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:1794:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+1794 export class DesktopBuildAlreadyRunningError extends Schema.TaggedError<DesktopBuildAlreadyRunningError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:3557:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+3557 export class MacPackagedAppMissingError extends Schema.TaggedError<MacPackagedAppMissingError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-desktop-artifact.ts:3593:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+3593 export class LinuxPackagedAppMissingError extends Schema.TaggedError<LinuxPackagedAppMissingError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+build-npm-launcher.ts:24:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+24 export class NpmLauncherCommandFailedError extends Schema.TaggedError<NpmLauncherCommandFailedError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:111:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+111 export class DevRunnerConfigurationError extends Schema.TaggedError<DevRunnerConfigurationError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:123:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+123 export class DevRunnerInvalidPortOffsetError extends Schema.TaggedError<DevRunnerInvalidPortOffsetError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:136:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+136 export class DevRunnerPortExhaustedError extends Schema.TaggedError<DevRunnerPortExhaustedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:152:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+152 export class DevRunnerProcessError extends Schema.TaggedError<DevRunnerProcessError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:168:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+168 export class DevRunnerProcessExitError extends Schema.TaggedError<DevRunnerProcessExitError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:183:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+183 export class DevRunnerHostNotProxiableError extends Schema.TaggedError<DevRunnerHostNotProxiableError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dev-runner.ts:195:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+195 export class DevRunnerBuiltNeedsShareError extends Schema.TaggedError<DevRunnerBuiltNeedsShareError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-android-icons.ts:25:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+25 export class AndroidIconRenderError extends Schema.TaggedError<AndroidIconRenderError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:78:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+78 export class IconExportFileSystemError extends Schema.TaggedError<IconExportFileSystemError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:101:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+101 export class IconExportProcessError extends Schema.TaggedError<IconExportProcessError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:115:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+115 export class IconExportCommandFailedError extends Schema.TaggedError<IconExportCommandFailedError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:132:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+132 export class IconExportToolResolutionError extends Schema.TaggedError<IconExportToolResolutionError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:153:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+153 export class IconExportSourceMissingError extends Schema.TaggedError<IconExportSourceMissingError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:164:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+164 export class IconExportRenditionError extends Schema.TaggedError<IconExportRenditionError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:184:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+184 export class IconExportEncodingError extends Schema.TaggedError<IconExportEncodingError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+export-brand-icons.ts:196:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+196 export class IconExportAssetsStaleError extends Schema.TaggedError<IconExportAssetsStaleError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+generate-release-notes.ts:33:57 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+33 class EmptyReleaseRangeError extends Schema.TaggedError<EmptyReleaseRangeError>()(
+                                                           ~~~~~~~~~~~~~~~~~~~~~~
+
+lib/dev-memory-limit.ts:16:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+16 export class DevRunnerMemoryLimitError extends Schema.TaggedError<DevRunnerMemoryLimitError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lib/dev-share.ts:35:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+35 export class TailscaleUnavailableError extends Schema.TaggedError<TailscaleUnavailableError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lib/dev-share.ts:48:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+48 export class TailnetNameMissingError extends Schema.TaggedError<TailnetNameMissingError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+lib/dev-share.ts:61:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+61 export class DevServeFailedError extends Schema.TaggedError<DevServeFailedError>()(
+                                                               ~~~~~~~~~~~~~~~~~~~
+
+lib/linux-arm64-sea.ts:12:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+12 class LinuxArm64SeaError extends Schema.TaggedError<LinuxArm64SeaError>()("LinuxArm64SeaError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+lib/resolve-catalog.ts:3:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+3 class CatalogDependencyResolutionError extends Schema.TaggedError<CatalogDependencyResolutionError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lib/windows-jsign.ts:23:58 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+23 export class JsignFailedError extends Schema.TaggedError<JsignFailedError>()("JsignFailedError", {
+                                                            ~~~~~~~~~~~~~~~~
+
+mobile-behavior/device.ts:28:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+28 export class DeviceError extends Schema.TaggedError<DeviceError>()("DeviceError", {
+                                                       ~~~~~~~~~~~
+
+mobile-behavior/environment.ts:39:58 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+39 export class EnvironmentError extends Schema.TaggedError<EnvironmentError>()("EnvironmentError", {
+                                                            ~~~~~~~~~~~~~~~~
+
+mobile-behavior/scenarios.ts:149:57 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+149 export class ScenarioFailure extends Schema.TaggedError<ScenarioFailure>()("ScenarioFailure", {
+                                                            ~~~~~~~~~~~~~~~
+
+mobile-e2e/device.ts:65:51 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+65 class AgentDeviceError extends Schema.TaggedError<AgentDeviceError>()("AgentDeviceError", {
+                                                     ~~~~~~~~~~~~~~~~
+
+mobile-native-client.ts:42:59 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+42 export class NativeClientError extends Schema.TaggedError<NativeClientError>()(
+                                                             ~~~~~~~~~~~~~~~~~
+
+mobile-native-static-check.ts:22:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+22 export class NativeStaticCheckSourceDiscoveryError extends Schema.TaggedError<NativeStaticCheckSourceDiscoveryError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mobile-native-static-check.ts:35:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+35 export class NativeStaticCheckProcessError extends Schema.TaggedError<NativeStaticCheckProcessError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mobile-native-static-check.ts:51:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+51 export class NativeStaticCheckCommandError extends Schema.TaggedError<NativeStaticCheckCommandError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mobile-native-static-check.ts:68:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+68 export class NativeStaticCheckMissingToolError extends Schema.TaggedError<NativeStaticCheckMissingToolError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+notify-discord-release.ts:64:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+64 export class DiscordReleaseWebhookConfigurationError extends Schema.TaggedError<DiscordReleaseWebhookConfigurationError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+notify-discord-release.ts:87:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+87 export class DiscordReleaseWebhookRequestError extends Schema.TaggedError<DiscordReleaseWebhookRequestError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+notify-discord-release.ts:99:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+99 export class DiscordReleaseWebhookResponseError extends Schema.TaggedError<DiscordReleaseWebhookResponseError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-nightly-release.ts:32:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+32 export class InvalidDesktopPackageVersionError extends Schema.TaggedError<InvalidDesktopPackageVersionError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-nightly-release.ts:43:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+43 export class NightlyReleaseDesktopPackageError extends Schema.TaggedError<NightlyReleaseDesktopPackageError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-nightly-release.ts:56:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+56 export class NightlyReleaseGitHubOutputConfigError extends Schema.TaggedError<NightlyReleaseGitHubOutputConfigError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-nightly-release.ts:67:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+67 export class NightlyReleaseGitHubOutputAppendError extends Schema.TaggedError<NightlyReleaseGitHubOutputAppendError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-previous-release-tag.ts:17:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+17 export class InvalidReleaseTagError extends Schema.TaggedError<InvalidReleaseTagError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-previous-release-tag.ts:37:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+37 export class ReleaseTagListProcessError extends Schema.TaggedError<ReleaseTagListProcessError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-previous-release-tag.ts:50:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+50 export class ReleaseTagListProcessExitError extends Schema.TaggedError<ReleaseTagListProcessExitError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-previous-release-tag.ts:64:83 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+64 export class PreviousReleaseTagGitHubOutputConfigError extends Schema.TaggedError<PreviousReleaseTagGitHubOutputConfigError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+resolve-previous-release-tag.ts:75:83 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+75 export class PreviousReleaseTagGitHubOutputAppendError extends Schema.TaggedError<PreviousReleaseTagGitHubOutputAppendError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scenarios/shell.ts:7:55 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+7 export class ScenarioError extends Schema.TaggedError<ScenarioError>()("ScenarioError", {
+                                                        ~~~~~~~~~~~~~
+
+smoke-cli-archive.ts:22:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+22 export class CliArchiveSmokeError extends Schema.TaggedError<CliArchiveSmokeError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+sync-reference-repos.ts:32:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+32 export class ReferenceRepoSelectionError extends Schema.TaggedError<ReferenceRepoSelectionError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sync-reference-repos.ts:44:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+44 export class ReferenceRepoVersionSourceError extends Schema.TaggedError<ReferenceRepoVersionSourceError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sync-reference-repos.ts:58:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+58 export class ReferenceRepoVersionResolutionError extends Schema.TaggedError<ReferenceRepoVersionResolutionError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sync-reference-repos.ts:71:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+71 export class ReferenceRepoGitError extends Schema.TaggedError<ReferenceRepoGitError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+sync-reference-repos.ts:90:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+90 export class ReferenceRepoFileSystemError extends Schema.TaggedError<ReferenceRepoFileSystemError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+update-release-package-versions.ts:17:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+17 export class ReleasePackageManifestError extends Schema.TaggedError<ReleasePackageManifestError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+update-release-package-versions.ts:30:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+30 export class ReleaseGitHubOutputConfigurationError extends Schema.TaggedError<ReleaseGitHubOutputConfigurationError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+update-release-package-versions.ts:39:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+39 export class ReleaseGitHubOutputWriteError extends Schema.TaggedError<ReleaseGitHubOutputWriteError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~/evals$ effect-tsgo tsrs --noEmit ○ cache miss: 'apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.ts' modified, executing
+~/apps/server$ effect-tsgo tsrs --noEmit ○ cache miss: 'apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts' modified, executing
+../apps/server/src/assets/MediaFile.ts:10:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+10 class MediaFileOpenError extends Schema.TaggedError<MediaFileOpenError>()("MediaFileOpenError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/assets/MediaFile.ts:19:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+19 class MediaFileReadError extends Schema.TaggedError<MediaFileReadError>()("MediaFileReadError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/assets/MediaFile.ts:28:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+28 class MediaFileStatError extends Schema.TaggedError<MediaFileStatError>()("MediaFileStatError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:106:86 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+106 export class ServerAuthBootstrapCredentialValidationError extends Schema.TaggedError<ServerAuthBootstrapCredentialValidationError>()(
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:117:84 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+117 export class ServerAuthSessionCredentialValidationError extends Schema.TaggedError<ServerAuthSessionCredentialValidationError>()(
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:128:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+128 export class ServerAuthAuthenticatedSessionIssueError extends Schema.TaggedError<ServerAuthAuthenticatedSessionIssueError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:139:86 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+139 export class ServerAuthAuthenticatedAccessTokenIssueError extends Schema.TaggedError<ServerAuthAuthenticatedAccessTokenIssueError>()(
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:150:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+150 export class ServerAuthPairingLinkCreationError extends Schema.TaggedError<ServerAuthPairingLinkCreationError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:161:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+161 export class ServerAuthPairingLinksListError extends Schema.TaggedError<ServerAuthPairingLinksListError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:172:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+172 export class ServerAuthPairingLinkRevocationError extends Schema.TaggedError<ServerAuthPairingLinkRevocationError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:183:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+183 export class ServerAuthSessionTokenIssueError extends Schema.TaggedError<ServerAuthSessionTokenIssueError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:194:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+194 export class ServerAuthSessionsListError extends Schema.TaggedError<ServerAuthSessionsListError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:205:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+205 export class ServerAuthSessionRevocationError extends Schema.TaggedError<ServerAuthSessionRevocationError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:216:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+216 export class ServerAuthOtherSessionsRevocationError extends Schema.TaggedError<ServerAuthOtherSessionsRevocationError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:227:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+227 export class ServerAuthWebSocketTokenIssueError extends Schema.TaggedError<ServerAuthWebSocketTokenIssueError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:238:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+238 export class ServerAuthDpopReplayStateRecordError extends Schema.TaggedError<ServerAuthDpopReplayStateRecordError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:249:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+249 export class ServerAuthDpopReplayKeyCalculationError extends Schema.TaggedError<ServerAuthDpopReplayKeyCalculationError>()(
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:260:87 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+260 export class ServerAuthLinkedCloudAccountVerificationError extends Schema.TaggedError<ServerAuthLinkedCloudAccountVerificationError>()(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:271:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+271 export class ServerAuthLinkedCloudAccountReadError extends Schema.TaggedError<ServerAuthLinkedCloudAccountReadError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:282:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+282 export class ServerAuthLinkedCloudAccountMissingError extends Schema.TaggedError<ServerAuthLinkedCloudAccountMissingError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:291:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+291 export class ServerAuthCloudLinkJwtSigningError extends Schema.TaggedError<ServerAuthCloudLinkJwtSigningError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:302:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+302 export class ServerAuthCloudMintPublicKeyMissingError extends Schema.TaggedError<ServerAuthCloudMintPublicKeyMissingError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:311:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+311 export class ServerAuthCloudRelayIssuerMissingError extends Schema.TaggedError<ServerAuthCloudRelayIssuerMissingError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:320:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+320 export class ServerAuthCloudHealthJwtSigningError extends Schema.TaggedError<ServerAuthCloudHealthJwtSigningError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:331:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+331 export class ServerAuthCloudMintJwtSigningError extends Schema.TaggedError<ServerAuthCloudMintJwtSigningError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:342:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+342 export class ServerAuthConnectDevicesError extends Schema.TaggedError<ServerAuthConnectDevicesError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:381:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+381 export class ServerAuthMissingCredentialError extends Schema.TaggedError<ServerAuthMissingCredentialError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:390:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+390 export class ServerAuthInvalidCredentialError extends Schema.TaggedError<ServerAuthInvalidCredentialError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:419:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+419 export class ServerAuthInvalidScopeError extends Schema.TaggedError<ServerAuthInvalidScopeError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:428:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+428 export class ServerAuthScopeNotGrantedError extends Schema.TaggedError<ServerAuthScopeNotGrantedError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:449:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+449 export class ServerAuthConnectApprovalPendingError extends Schema.TaggedError<ServerAuthConnectApprovalPendingError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:458:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+458 export class ServerAuthMcpApprovalCodeError extends Schema.TaggedError<ServerAuthMcpApprovalCodeError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/EnvironmentAuth.ts:471:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+471 export class ServerAuthForbiddenOperationError extends Schema.TaggedError<ServerAuthForbiddenOperationError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:45:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+45 export class UnknownBootstrapCredentialError extends Schema.TaggedError<UnknownBootstrapCredentialError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:54:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+54 export class ExpiredBootstrapCredentialError extends Schema.TaggedError<ExpiredBootstrapCredentialError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:63:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+63 export class BootstrapCredentialProofKeyMismatchError extends Schema.TaggedError<BootstrapCredentialProofKeyMismatchError>()(
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:72:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+72 export class UnavailableBootstrapCredentialError extends Schema.TaggedError<UnavailableBootstrapCredentialError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:81:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+81 export class BootstrapCredentialScopeNotGrantedError extends Schema.TaggedError<BootstrapCredentialScopeNotGrantedError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:91:88 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+91 export class BootstrapCredentialConnectApprovalPendingError extends Schema.TaggedError<BootstrapCredentialConnectApprovalPendingError>()(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:111:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+111 export class ActivePairingLinksLoadError extends Schema.TaggedError<ActivePairingLinksLoadError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:122:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+122 export class PairingLinkRevokeError extends Schema.TaggedError<PairingLinkRevokeError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:134:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+134 export class PairingCredentialIssueError extends Schema.TaggedError<PairingCredentialIssueError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:148:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+148 export class PairingCredentialRandomGenerationError extends Schema.TaggedError<PairingCredentialRandomGenerationError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:160:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+160 export class BootstrapCredentialConsumeError extends Schema.TaggedError<BootstrapCredentialConsumeError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:171:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+171 export class BootstrapCredentialConsumeAvailableError extends Schema.TaggedError<BootstrapCredentialConsumeAvailableError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:182:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+182 export class ConnectDevicesError extends Schema.TaggedError<ConnectDevicesError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/PairingGrantStore.ts:194:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+194 export class BootstrapCredentialLookupError extends Schema.TaggedError<BootstrapCredentialLookupError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:19:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+19 export class SecretStoreSecureError extends Schema.TaggedError<SecretStoreSecureError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:30:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+30 export class SecretStoreReadError extends Schema.TaggedError<SecretStoreReadError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:41:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+41 export class SecretStoreTemporaryPathError extends Schema.TaggedError<SecretStoreTemporaryPathError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:52:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+52 export class SecretStorePersistError extends Schema.TaggedError<SecretStorePersistError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:63:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+63 export class SecretStoreRandomGenerationError extends Schema.TaggedError<SecretStoreRandomGenerationError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:74:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+74 export class SecretStoreConcurrentReadError extends Schema.TaggedError<SecretStoreConcurrentReadError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:85:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+85 export class SecretStoreRemoveError extends Schema.TaggedError<SecretStoreRemoveError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:96:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+96 export class SecretStoreDecodeError extends Schema.TaggedError<SecretStoreDecodeError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/ServerSecretStore.ts:107:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+107 export class SecretStoreEncodeError extends Schema.TaggedError<SecretStoreEncodeError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:79:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+79 export class MalformedSessionTokenError extends Schema.TaggedError<MalformedSessionTokenError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:88:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+88 export class InvalidSessionTokenSignatureError extends Schema.TaggedError<InvalidSessionTokenSignatureError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:97:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+97 export class InvalidSessionTokenPayloadError extends Schema.TaggedError<InvalidSessionTokenPayloadError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:108:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+108 export class SessionTokenExpiredError extends Schema.TaggedError<SessionTokenExpiredError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:121:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+121 export class UnknownSessionTokenError extends Schema.TaggedError<UnknownSessionTokenError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:132:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+132 export class SessionTokenRevokedError extends Schema.TaggedError<SessionTokenRevokedError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:144:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+144 export class InvalidSessionExpirationClaimError extends Schema.TaggedError<InvalidSessionExpirationClaimError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:156:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+156 export class MalformedWebSocketTokenError extends Schema.TaggedError<MalformedWebSocketTokenError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:165:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+165 export class InvalidWebSocketTokenSignatureError extends Schema.TaggedError<InvalidWebSocketTokenSignatureError>()(
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:174:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+174 export class InvalidWebSocketTokenPayloadError extends Schema.TaggedError<InvalidWebSocketTokenPayloadError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:185:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+185 export class WebSocketTokenExpiredError extends Schema.TaggedError<WebSocketTokenExpiredError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:198:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+198 export class UnknownWebSocketSessionError extends Schema.TaggedError<UnknownWebSocketSessionError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:209:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+209 export class WebSocketSessionExpiredError extends Schema.TaggedError<WebSocketSessionExpiredError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:222:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+222 export class WebSocketSessionRevokedError extends Schema.TaggedError<WebSocketSessionRevokedError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:257:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+257 export class SessionClaimsEncodingError extends Schema.TaggedError<SessionClaimsEncodingError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:270:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+270 export class SessionCredentialIssueError extends Schema.TaggedError<SessionCredentialIssueError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:282:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+282 export class SessionCredentialVerificationError extends Schema.TaggedError<SessionCredentialVerificationError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:294:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+294 export class WebSocketTokenIssueError extends Schema.TaggedError<WebSocketTokenIssueError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:306:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+306 export class WebSocketTokenVerificationError extends Schema.TaggedError<WebSocketTokenVerificationError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:318:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+318 export class ActiveSessionsListError extends Schema.TaggedError<ActiveSessionsListError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:329:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+329 export class SessionRevocationError extends Schema.TaggedError<SessionRevocationError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:341:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+341 export class OtherSessionsRevocationError extends Schema.TaggedError<OtherSessionsRevocationError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/auth/SessionStore.ts:353:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+353 export class ProofKeySessionsError extends Schema.TaggedError<ProofKeySessionsError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/checkpointing/Errors.ts:12:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+12 export class CheckpointDiffResultInvalidError extends Schema.TaggedError<CheckpointDiffResultInvalidError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/checkpointing/Errors.ts:26:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+26 export class CheckpointThreadNotFoundError extends Schema.TaggedError<CheckpointThreadNotFoundError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/checkpointing/Errors.ts:38:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+38 export class CheckpointWorkspacePathMissingError extends Schema.TaggedError<CheckpointWorkspacePathMissingError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/checkpointing/Errors.ts:52:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+52 export class CheckpointTurnRangeUnavailableError extends Schema.TaggedError<CheckpointTurnRangeUnavailableError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/checkpointing/Errors.ts:66:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+66 export class CheckpointRefUnavailableError extends Schema.TaggedError<CheckpointRefUnavailableError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:610:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+610 export class BootServiceUnsupportedError extends Schema.TaggedError<BootServiceUnsupportedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:619:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+619 export class BootServiceCommandError extends Schema.TaggedError<BootServiceCommandError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:636:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+636 export class BootServiceInstallError extends Schema.TaggedError<BootServiceInstallError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:672:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+672 export class BootServicePrerequisiteError extends Schema.TaggedError<BootServicePrerequisiteError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:681:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+681 export class BootServiceUpdatePendingError extends Schema.TaggedError<BootServiceUpdatePendingError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:693:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+693 export class BootServiceDowngradeRefusedError extends Schema.TaggedError<BootServiceDowngradeRefusedError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:708:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+708 export class BootServiceOtherBaseDirError extends Schema.TaggedError<BootServiceOtherBaseDirError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/bootService.ts:725:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+725 export class BootServiceBaseDirUnsupportedError extends Schema.TaggedError<BootServiceBaseDirUnsupportedError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/pinnedRuntime.ts:68:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+68 export class PinnedRuntimeInstallError extends Schema.TaggedError<PinnedRuntimeInstallError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/pinnedRuntime.ts:87:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+87 export class PinnedRuntimePreflightBlockedError extends Schema.TaggedError<PinnedRuntimePreflightBlockedError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/serviceLauncherClient.ts:23:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+23 export class ServiceLauncherClientError extends Schema.TaggedError<ServiceLauncherClientError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/cloud/serviceLauncherClient.ts:55:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+55 export class ServiceLauncherRejectedError extends Schema.TaggedError<ServiceLauncherRejectedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceHost.ts:16:57 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+16 export class DeviceHostError extends Schema.TaggedError<DeviceHostError>()("DeviceHostError", {
+                                                           ~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceHost.ts:26:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+26 export class DeviceHostTimeoutError extends Schema.TaggedError<DeviceHostTimeoutError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceHost.ts:35:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+35 export class AgentDeviceStartError extends Schema.TaggedError<AgentDeviceStartError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceService.ts:142:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+142 export class DeviceHostAmbiguousError extends Schema.TaggedError<DeviceHostAmbiguousError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceService.ts:151:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+151 export class DeviceOnOtherHostError extends Schema.TaggedError<DeviceOnOtherHostError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/DeviceToolchain.ts:34:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+34 export class DeviceToolchainInstallError extends Schema.TaggedError<DeviceToolchainInstallError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/ExpoApi.ts:39:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+39 export class ExpoNotSignedInError extends Schema.TaggedError<ExpoNotSignedInError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/ExpoApi.ts:54:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+54 export class ExpoInvalidCredentialError extends Schema.TaggedError<ExpoInvalidCredentialError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/ExpoApi.ts:83:54 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+83 export class ExpoApiError extends Schema.TaggedError<ExpoApiError>()("ExpoApiError", {
+                                                        ~~~~~~~~~~~~
+
+../apps/server/src/device/SshDeviceHost.ts:34:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+34 export class SshWindowsHostError extends Schema.TaggedError<SshWindowsHostError>()(
+                                                               ~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/device/deviceToolMaintenance.ts:98:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+98 class DeviceToolMaintenanceError extends Schema.TaggedError<DeviceToolMaintenanceError>()(
+                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/environment/ServerEnvironment.ts:29:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+29 export class ServerEnvironmentIdPersistenceError extends Schema.TaggedError<ServerEnvironmentIdPersistenceError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/environment/ServerEnvironmentLabel.ts:19:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+19 export class ServerEnvironmentLabelFileError extends Schema.TaggedError<ServerEnvironmentLabelFileError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/environment/ServerEnvironmentLabel.ts:32:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+32 export class ServerEnvironmentLabelCommandError extends Schema.TaggedError<ServerEnvironmentLabelCommandError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/environmentTheme.ts:61:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+61 export class EnvironmentThemeRefusedError extends Schema.TaggedError<EnvironmentThemeRefusedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/environmentTheme.ts:77:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+77 export class EnvironmentThemeNotSelectedError extends Schema.TaggedError<EnvironmentThemeNotSelectedError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:50:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+50 export class HtmlRenderFileError extends Schema.TaggedError<HtmlRenderFileError>()(
+                                                               ~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:59:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+59 export class HtmlRenderFileTooLargeError extends Schema.TaggedError<HtmlRenderFileTooLargeError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:68:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+68 export class HtmlRenderImagesNotFoundError extends Schema.TaggedError<HtmlRenderImagesNotFoundError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:77:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+77 export class HtmlRenderImageTooLargeError extends Schema.TaggedError<HtmlRenderImageTooLargeError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:86:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+86 export class HtmlRenderPageTooLargeError extends Schema.TaggedError<HtmlRenderPageTooLargeError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:95:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+95 export class HtmlRenderViewportHeightError extends Schema.TaggedError<HtmlRenderViewportHeightError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/HtmlRender.ts:120:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+120 export class HtmlRenderStoreError extends Schema.TaggedError<HtmlRenderStoreError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/htmlRender/headlessChrome.ts:16:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+16 export class HtmlRenderBrowserError extends Schema.TaggedError<HtmlRenderBrowserError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/McpHttpServer.ts:469:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+469 export class PreviewScreenshotSaveError extends Schema.TaggedError<PreviewScreenshotSaveError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/toolkits/pullRequests/tools.ts:72:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+72 export class PullRequestThreadRequiredError extends Schema.TaggedError<PullRequestThreadRequiredError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/toolkits/pullRequests/tools.ts:81:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+81 export class PullRequestLinkFailedError extends Schema.TaggedError<PullRequestLinkFailedError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/toolkits/pullRequests/tools.ts:99:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+99 export class PullRequestListFailedError extends Schema.TaggedError<PullRequestListFailedError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/toolkits/pullRequests/tools.ts:108:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+108 export class PullRequestProjectNotFoundError extends Schema.TaggedError<PullRequestProjectNotFoundError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcp/toolkits/pullRequests/tools.ts:117:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+117 export class PullRequestGuideFailedError extends Schema.TaggedError<PullRequestGuideFailedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/mcpApps/McpAppModelContext.ts:12:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+12 export class McpAppModelContextError extends Schema.TaggedError<McpAppModelContextError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.ts:698:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+698 export class ClaudeAgentSdkQueryRunnerError extends Schema.TaggedError<ClaudeAgentSdkQueryRunnerError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.ts:710:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+710 export class ClaudeCodeRootRefusalError extends Schema.TaggedError<ClaudeCodeRootRefusalError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+../apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.ts:721:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+721 class ClaudeMcpRegistrationTimeoutError extends Schema.TaggedError<ClaudeMcpRegistrationTimeoutError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+integration/NetworkTransferMeasurement.integration.ts:15:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+15 export class TransferHttpRequestError extends Schema.TaggedError<TransferHttpRequestError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:3:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+3 export class ServerCliCommandExitError extends Schema.TaggedError<ServerCliCommandExitError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:17:84 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+17 export class ServerCliDevelopmentIconSourceMissingError extends Schema.TaggedError<ServerCliDevelopmentIconSourceMissingError>()(
+                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:28:84 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+28 export class ServerCliDevelopmentIconTargetMissingError extends Schema.TaggedError<ServerCliDevelopmentIconTargetMissingError>()(
+                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:39:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+39 export class ServerCliBuildAssetMissingError extends Schema.TaggedError<ServerCliBuildAssetMissingError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:50:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+50 export class ServerCliExecutableImportError extends Schema.TaggedError<ServerCliExecutableImportError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/cliErrors.ts:62:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+62 export class ServerCliBootstrapTooLargeError extends Schema.TaggedError<ServerCliBootstrapTooLargeError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:23:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+23 export class MigrateDevDbNotInWorktreeError extends Schema.TaggedError<MigrateDevDbNotInWorktreeError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:32:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+32 export class MigrateDevDbSharedHomeError extends Schema.TaggedError<MigrateDevDbSharedHomeError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:41:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+41 export class MigrateDevDbSourceMissingError extends Schema.TaggedError<MigrateDevDbSourceMissingError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:52:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+52 export class MigrateDevDbSourceIsDestinationError extends Schema.TaggedError<MigrateDevDbSourceIsDestinationError>()(
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:63:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+63 export class MigrateDevDbLegacySourceError extends Schema.TaggedError<MigrateDevDbLegacySourceError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:75:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+75 export class MigrateDevDbServerRunningError extends Schema.TaggedError<MigrateDevDbServerRunningError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:87:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+87 export class MigrateDevDbDestinationBusyError extends Schema.TaggedError<MigrateDevDbDestinationBusyError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/migrate-dev-db.ts:104:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+104 export class MigrateDevDbPhaseError extends Schema.TaggedError<MigrateDevDbPhaseError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:22:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+22 export class SqliteStateMultipleSqlSourcesError extends Schema.TaggedError<SqliteStateMultipleSqlSourcesError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:31:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+31 export class SqliteStateMissingSqlSourceError extends Schema.TaggedError<SqliteStateMissingSqlSourceError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:40:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+40 export class SqliteStateEmptySqlError extends Schema.TaggedError<SqliteStateEmptySqlError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:49:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+49 export class SqliteStateDatabaseMissingError extends Schema.TaggedError<SqliteStateDatabaseMissingError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:60:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+60 export class SqliteStateSharedHomeMutationError extends Schema.TaggedError<SqliteStateSharedHomeMutationError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:69:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+69 export class SqliteStateSqlFileError extends Schema.TaggedError<SqliteStateSqlFileError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+scripts/t3-sqlite-state.ts:81:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+81 export class SqliteStateDatabaseError extends Schema.TaggedError<SqliteStateDatabaseError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/assets/MediaFile.ts:10:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+10 class MediaFileOpenError extends Schema.TaggedError<MediaFileOpenError>()("MediaFileOpenError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+src/assets/MediaFile.ts:19:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+19 class MediaFileReadError extends Schema.TaggedError<MediaFileReadError>()("MediaFileReadError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+src/assets/MediaFile.ts:28:53 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+28 class MediaFileStatError extends Schema.TaggedError<MediaFileStatError>()("MediaFileStatError", {
+                                                       ~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:106:86 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+106 export class ServerAuthBootstrapCredentialValidationError extends Schema.TaggedError<ServerAuthBootstrapCredentialValidationError>()(
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:117:84 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+117 export class ServerAuthSessionCredentialValidationError extends Schema.TaggedError<ServerAuthSessionCredentialValidationError>()(
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:128:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+128 export class ServerAuthAuthenticatedSessionIssueError extends Schema.TaggedError<ServerAuthAuthenticatedSessionIssueError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:139:86 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+139 export class ServerAuthAuthenticatedAccessTokenIssueError extends Schema.TaggedError<ServerAuthAuthenticatedAccessTokenIssueError>()(
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:150:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+150 export class ServerAuthPairingLinkCreationError extends Schema.TaggedError<ServerAuthPairingLinkCreationError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:161:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+161 export class ServerAuthPairingLinksListError extends Schema.TaggedError<ServerAuthPairingLinksListError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:172:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+172 export class ServerAuthPairingLinkRevocationError extends Schema.TaggedError<ServerAuthPairingLinkRevocationError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:183:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+183 export class ServerAuthSessionTokenIssueError extends Schema.TaggedError<ServerAuthSessionTokenIssueError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:194:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+194 export class ServerAuthSessionsListError extends Schema.TaggedError<ServerAuthSessionsListError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:205:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+205 export class ServerAuthSessionRevocationError extends Schema.TaggedError<ServerAuthSessionRevocationError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:216:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+216 export class ServerAuthOtherSessionsRevocationError extends Schema.TaggedError<ServerAuthOtherSessionsRevocationError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:227:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+227 export class ServerAuthWebSocketTokenIssueError extends Schema.TaggedError<ServerAuthWebSocketTokenIssueError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:238:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+238 export class ServerAuthDpopReplayStateRecordError extends Schema.TaggedError<ServerAuthDpopReplayStateRecordError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:249:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+249 export class ServerAuthDpopReplayKeyCalculationError extends Schema.TaggedError<ServerAuthDpopReplayKeyCalculationError>()(
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:260:87 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+260 export class ServerAuthLinkedCloudAccountVerificationError extends Schema.TaggedError<ServerAuthLinkedCloudAccountVerificationError>()(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:271:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+271 export class ServerAuthLinkedCloudAccountReadError extends Schema.TaggedError<ServerAuthLinkedCloudAccountReadError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:282:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+282 export class ServerAuthLinkedCloudAccountMissingError extends Schema.TaggedError<ServerAuthLinkedCloudAccountMissingError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:291:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+291 export class ServerAuthCloudLinkJwtSigningError extends Schema.TaggedError<ServerAuthCloudLinkJwtSigningError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:302:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+302 export class ServerAuthCloudMintPublicKeyMissingError extends Schema.TaggedError<ServerAuthCloudMintPublicKeyMissingError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:311:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+311 export class ServerAuthCloudRelayIssuerMissingError extends Schema.TaggedError<ServerAuthCloudRelayIssuerMissingError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:320:78 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+320 export class ServerAuthCloudHealthJwtSigningError extends Schema.TaggedError<ServerAuthCloudHealthJwtSigningError>()(
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:331:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+331 export class ServerAuthCloudMintJwtSigningError extends Schema.TaggedError<ServerAuthCloudMintJwtSigningError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:342:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+342 export class ServerAuthConnectDevicesError extends Schema.TaggedError<ServerAuthConnectDevicesError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:381:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+381 export class ServerAuthMissingCredentialError extends Schema.TaggedError<ServerAuthMissingCredentialError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:390:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+390 export class ServerAuthInvalidCredentialError extends Schema.TaggedError<ServerAuthInvalidCredentialError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:419:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+419 export class ServerAuthInvalidScopeError extends Schema.TaggedError<ServerAuthInvalidScopeError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:428:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+428 export class ServerAuthScopeNotGrantedError extends Schema.TaggedError<ServerAuthScopeNotGrantedError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:449:79 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+449 export class ServerAuthConnectApprovalPendingError extends Schema.TaggedError<ServerAuthConnectApprovalPendingError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:458:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+458 export class ServerAuthMcpApprovalCodeError extends Schema.TaggedError<ServerAuthMcpApprovalCodeError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/EnvironmentAuth.ts:471:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+471 export class ServerAuthForbiddenOperationError extends Schema.TaggedError<ServerAuthForbiddenOperationError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/McpOAuth.ts:157:59 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+157 export class McpOAuthPageError extends Schema.TaggedError<McpOAuthPageError>()(
+                                                              ~~~~~~~~~~~~~~~~~
+
+src/auth/McpOAuth.ts:166:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+166 export class McpOAuthRedirectError extends Schema.TaggedError<McpOAuthRedirectError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:45:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+45 export class UnknownBootstrapCredentialError extends Schema.TaggedError<UnknownBootstrapCredentialError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:54:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+54 export class ExpiredBootstrapCredentialError extends Schema.TaggedError<ExpiredBootstrapCredentialError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:63:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+63 export class BootstrapCredentialProofKeyMismatchError extends Schema.TaggedError<BootstrapCredentialProofKeyMismatchError>()(
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:72:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+72 export class UnavailableBootstrapCredentialError extends Schema.TaggedError<UnavailableBootstrapCredentialError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:81:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+81 export class BootstrapCredentialScopeNotGrantedError extends Schema.TaggedError<BootstrapCredentialScopeNotGrantedError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:91:88 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+91 export class BootstrapCredentialConnectApprovalPendingError extends Schema.TaggedError<BootstrapCredentialConnectApprovalPendingError>()(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:111:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+111 export class ActivePairingLinksLoadError extends Schema.TaggedError<ActivePairingLinksLoadError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:122:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+122 export class PairingLinkRevokeError extends Schema.TaggedError<PairingLinkRevokeError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:134:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+134 export class PairingCredentialIssueError extends Schema.TaggedError<PairingCredentialIssueError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:148:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+148 export class PairingCredentialRandomGenerationError extends Schema.TaggedError<PairingCredentialRandomGenerationError>()(
+                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:160:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+160 export class BootstrapCredentialConsumeError extends Schema.TaggedError<BootstrapCredentialConsumeError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:171:82 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+171 export class BootstrapCredentialConsumeAvailableError extends Schema.TaggedError<BootstrapCredentialConsumeAvailableError>()(
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:182:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+182 export class ConnectDevicesError extends Schema.TaggedError<ConnectDevicesError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~
+
+src/auth/PairingGrantStore.ts:194:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+194 export class BootstrapCredentialLookupError extends Schema.TaggedError<BootstrapCredentialLookupError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:19:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+19 export class SecretStoreSecureError extends Schema.TaggedError<SecretStoreSecureError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:30:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+30 export class SecretStoreReadError extends Schema.TaggedError<SecretStoreReadError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:41:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+41 export class SecretStoreTemporaryPathError extends Schema.TaggedError<SecretStoreTemporaryPathError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:52:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+52 export class SecretStorePersistError extends Schema.TaggedError<SecretStorePersistError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:63:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+63 export class SecretStoreRandomGenerationError extends Schema.TaggedError<SecretStoreRandomGenerationError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:74:72 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+74 export class SecretStoreConcurrentReadError extends Schema.TaggedError<SecretStoreConcurrentReadError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:85:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+85 export class SecretStoreRemoveError extends Schema.TaggedError<SecretStoreRemoveError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:96:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+96 export class SecretStoreDecodeError extends Schema.TaggedError<SecretStoreDecodeError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/ServerSecretStore.ts:107:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+107 export class SecretStoreEncodeError extends Schema.TaggedError<SecretStoreEncodeError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:79:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+79 export class MalformedSessionTokenError extends Schema.TaggedError<MalformedSessionTokenError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:88:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+88 export class InvalidSessionTokenSignatureError extends Schema.TaggedError<InvalidSessionTokenSignatureError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:97:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+97 export class InvalidSessionTokenPayloadError extends Schema.TaggedError<InvalidSessionTokenPayloadError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:108:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+108 export class SessionTokenExpiredError extends Schema.TaggedError<SessionTokenExpiredError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:121:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+121 export class UnknownSessionTokenError extends Schema.TaggedError<UnknownSessionTokenError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:132:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+132 export class SessionTokenRevokedError extends Schema.TaggedError<SessionTokenRevokedError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:144:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+144 export class InvalidSessionExpirationClaimError extends Schema.TaggedError<InvalidSessionExpirationClaimError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:156:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+156 export class MalformedWebSocketTokenError extends Schema.TaggedError<MalformedWebSocketTokenError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:165:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+165 export class InvalidWebSocketTokenSignatureError extends Schema.TaggedError<InvalidWebSocketTokenSignatureError>()(
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:174:75 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+174 export class InvalidWebSocketTokenPayloadError extends Schema.TaggedError<InvalidWebSocketTokenPayloadError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:185:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+185 export class WebSocketTokenExpiredError extends Schema.TaggedError<WebSocketTokenExpiredError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:198:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+198 export class UnknownWebSocketSessionError extends Schema.TaggedError<UnknownWebSocketSessionError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:209:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+209 export class WebSocketSessionExpiredError extends Schema.TaggedError<WebSocketSessionExpiredError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:222:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+222 export class WebSocketSessionRevokedError extends Schema.TaggedError<WebSocketSessionRevokedError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:257:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+257 export class SessionClaimsEncodingError extends Schema.TaggedError<SessionClaimsEncodingError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:270:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+270 export class SessionCredentialIssueError extends Schema.TaggedError<SessionCredentialIssueError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:282:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+282 export class SessionCredentialVerificationError extends Schema.TaggedError<SessionCredentialVerificationError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:294:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+294 export class WebSocketTokenIssueError extends Schema.TaggedError<WebSocketTokenIssueError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:306:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+306 export class WebSocketTokenVerificationError extends Schema.TaggedError<WebSocketTokenVerificationError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:318:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+318 export class ActiveSessionsListError extends Schema.TaggedError<ActiveSessionsListError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:329:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+329 export class SessionRevocationError extends Schema.TaggedError<SessionRevocationError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:341:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+341 export class OtherSessionsRevocationError extends Schema.TaggedError<OtherSessionsRevocationError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/auth/SessionStore.ts:353:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+353 export class ProofKeySessionsError extends Schema.TaggedError<ProofKeySessionsError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~
+
+src/background/KeepAwake.ts:92:59 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+92 class KeepAwakeInhibitorExited extends Schema.TaggedError<KeepAwakeInhibitorExited>()(
+                                                             ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/bootstrap.ts:15:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+15 export class BootstrapFdStatError extends Schema.TaggedError<BootstrapFdStatError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+src/bootstrap.ts:27:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+27 export class BootstrapInputStreamOpenError extends Schema.TaggedError<BootstrapInputStreamOpenError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/bootstrap.ts:42:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+42 export class BootstrapEnvelopeReadError extends Schema.TaggedError<BootstrapEnvelopeReadError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/bootstrap.ts:54:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+54 export class BootstrapEnvelopeDecodeError extends Schema.TaggedError<BootstrapEnvelopeDecodeError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/checkpointing/Errors.ts:12:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+12 export class CheckpointDiffResultInvalidError extends Schema.TaggedError<CheckpointDiffResultInvalidError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/checkpointing/Errors.ts:26:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+26 export class CheckpointThreadNotFoundError extends Schema.TaggedError<CheckpointThreadNotFoundError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/checkpointing/Errors.ts:38:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+38 export class CheckpointWorkspacePathMissingError extends Schema.TaggedError<CheckpointWorkspacePathMissingError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/checkpointing/Errors.ts:52:77 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+52 export class CheckpointTurnRangeUnavailableError extends Schema.TaggedError<CheckpointTurnRangeUnavailableError>()(
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/checkpointing/Errors.ts:66:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+66 export class CheckpointRefUnavailableError extends Schema.TaggedError<CheckpointRefUnavailableError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/app.ts:35:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+35 export class DesktopAppSshUnsupportedError extends Schema.TaggedError<DesktopAppSshUnsupportedError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/app.ts:44:76 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+44 export class DesktopAppPlatformUnsupportedError extends Schema.TaggedError<DesktopAppPlatformUnsupportedError>()(
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/app.ts:53:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+53 export class DesktopAppUnreachableError extends Schema.TaggedError<DesktopAppUnreachableError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/app.ts:67:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+67 export class DesktopAppRequestFailedError extends Schema.TaggedError<DesktopAppRequestFailedError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/browser.ts:17:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+17 export class BrowserSetupStepError extends Schema.TaggedError<BrowserSetupStepError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/install.ts:22:57 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+22 export class CliInstallError extends Schema.TaggedError<CliInstallError>()("CliInstallError", {
+                                                           ~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:64:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+64 export class NoRunningServerError extends Schema.TaggedError<NoRunningServerError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:85:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+85 export class IncompatibleServerProtocolError extends Schema.TaggedError<IncompatibleServerProtocolError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:101:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+101 export class TailscaleUnavailableError extends Schema.TaggedError<TailscaleUnavailableError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:110:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+110 export class MagicDnsNameMissingError extends Schema.TaggedError<MagicDnsNameMissingError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:119:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+119 export class TailscaleServeNotEnabledError extends Schema.TaggedError<TailscaleServeNotEnabledError>()(
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:128:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+128 export class ServesOtherEnvironmentError extends Schema.TaggedError<ServesOtherEnvironmentError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:137:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+137 export class TailscaleServeFailedError extends Schema.TaggedError<TailscaleServeFailedError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:146:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+146 export class TailscaleServeTargetRefusedError extends Schema.TaggedError<TailscaleServeTargetRefusedError>()(
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:155:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+155 export class ServePortOccupiedError extends Schema.TaggedError<ServePortOccupiedError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/pair.ts:170:68 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+170 export class DevServerNotProxiableError extends Schema.TaggedError<DevServerNotProxiableError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:58:73 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+58 export class ProjectCommandIdGenerationError extends Schema.TaggedError<ProjectCommandIdGenerationError>()(
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:70:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+70 export class ProjectLiveServerDeclaredResponseError extends Schema.TaggedError<ProjectLiveServerDeclaredResponseError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:84:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+84 export class ProjectLiveServerUndeclaredStatusError extends Schema.TaggedError<ProjectLiveServerUndeclaredStatusError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:97:71 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+97 export class ProjectLiveServerRequestError extends Schema.TaggedError<ProjectLiveServerRequestError>()(
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:109:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+109 export class ProjectTitleEmptyError extends Schema.TaggedError<ProjectTitleEmptyError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:121:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+121 export class ProjectIdentifierEmptyError extends Schema.TaggedError<ProjectIdentifierEmptyError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:133:62 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+133 export class ProjectNotFoundError extends Schema.TaggedError<ProjectNotFoundError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~
+
+src/cli/project.ts:148:67 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+148 export class ProjectAlreadyExistsError extends Schema.TaggedError<ProjectAlreadyExistsError>()(
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:42:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+42 export class ThemeSettingsUnreadableError extends Schema.TaggedError<ThemeSettingsUnreadableError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:51:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+51 export class ThemeSettingsMalformedError extends Schema.TaggedError<ThemeSettingsMalformedError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:60:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+60 export class ThemeSettingsBusyError extends Schema.TaggedError<ThemeSettingsBusyError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:69:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+69 export class ThemeSettingsWriteError extends Schema.TaggedError<ThemeSettingsWriteError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:78:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+78 export class ThemeFileUnreadableError extends Schema.TaggedError<ThemeFileUnreadableError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:87:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+87 export class ThemeFileInvalidError extends Schema.TaggedError<ThemeFileInvalidError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:105:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+105 export class ThemeFileColorlessError extends Schema.TaggedError<ThemeFileColorlessError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:114:59 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+114 export class ThemePublishError extends Schema.TaggedError<ThemePublishError>()(
+                                                              ~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:126:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+126 export class ThemeIdUnknownError extends Schema.TaggedError<ThemeIdUnknownError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:135:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+135 export class ThemeIdInvalidError extends Schema.TaggedError<ThemeIdInvalidError>()(
+                                                                ~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:144:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+144 export class ThemeFileIdInvalidError extends Schema.TaggedError<ThemeFileIdInvalidError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/cli/theme.ts:153:65 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+153 export class ThemeTargetMissingError extends Schema.TaggedError<ThemeTargetMissingError>()(
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/project/ProjectService.ts:101:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+101 export class ProjectOperationError extends Schema.TaggedError<ProjectOperationError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~
+
+src/project/ProjectSetupScriptRunner.ts:79:74 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+79 export class ProjectSetupScriptOperationError extends Schema.TaggedError<ProjectSetupScriptOperationError>()(
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/project/ProjectSetupScriptRunner.ts:95:80 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+95 export class ProjectSetupScriptProjectNotFoundError extends Schema.TaggedError<ProjectSetupScriptProjectNotFoundError>()(
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/project/ProjectSetupScriptRunner.ts:109:81 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+109 export class ProjectSetupScriptUnsupportedShellError extends Schema.TaggedError<ProjectSetupScriptUnsupportedShellError>()(
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/project/ScratchThreadPromotion.ts:22:69 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+22 export class ScratchThreadPromotionError extends Schema.TaggedError<ScratchThreadPromotionError>()(
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/project/T3ProjectFileLoader.ts:14:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+14 export class T3ProjectFileLoadError extends Schema.TaggedError<T3ProjectFileLoadError>()(
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~
+
+src/provider/AntigravityInstallation.ts:76:70 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+76 export class AntigravityInstallationError extends Schema.TaggedError<AntigravityInstallationError>()(
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/provider/ClaudeCodeModelRoutes.ts:39:63 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+39 class ClaudeModelSettingsReadError extends Schema.TaggedError<ClaudeModelSettingsReadError>()(
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/provider/ClaudeProvider.ts:463:66 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+463 class ClaudeCapabilitiesProbeSdkError extends Schema.TaggedError<ClaudeCapabilitiesProbeSdkError>()(
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/provider/CodexChatGptModels.ts:7:61 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+7 export class ChatGptCatalogError extends Schema.TaggedError<ChatGptCatalogError>()(
+                                                              ~~~~~~~~~~~~~~~~~~~
+
+src/provider/CodexInstallation.ts:115:64 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+115 export class CodexInstallationError extends Schema.TaggedError<CodexInstallationError>()(
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+src/provider/CodexManagedTokenBroker.ts:25:51 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+25 class BrokerStartError extends Schema.TaggedError<BrokerStartError>()(
+                                                     ~~~~~~~~~~~~~~~~
+
+src/provider/CodexManagedTokenProtocol.ts:21:48 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+21 class ProtocolError extends Schema.TaggedError<ProtocolError>()("ManagedTokenProtocolError", {}) {
+                                                  ~~~~~~~~~~~~~
+
+src/provider/DocumentText.ts:16:52 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+16 class DocumentTextError extends Schema.TaggedError<DocumentTextError>()("DocumentTextError", {
+                                                      ~~~~~~~~~~~~~~~~~
+
+src/provider/claudeResetCredits.ts:75:57 - suggestion TS377141: Add `{ readonly brand: unique symbol }` as the second type argument. Without a brand, TypeScript may accept structurally compatible values where this class instance type is expected. effect(schemaClassMissingBrand)
+
+75 class ClaudeResetCreditError extends Schema.TaggedError<ClaudeResetCreditError>()(
+                                                           ~~~~~~~~~~~~~~~~~~~~~~
+
+
+---
+vp run: 1/3 cache hit (33%), 3/3 successful, 311ms saved. (Run `vp run --last-details` for full details)
+
+> vp test (2 files)  pass  11.1s
+
+ RUN  v5.0.5 <HOME>/Documents/Opensource Space/t3code-36405/repo
+
+ ✓  t3  src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts (429 tests) 3742ms
+   ✓ ClaudeAdapterV2 background wake turns (355)
+     ✓ persists a todo_list from inline Claude task-tool frames 870ms
+ ✓  t3  src/provider/AgentContextBudget.test.ts (2 tests) 46ms
+
+ Test Files  2 passed (2)
+      Tests  431 passed (431)
+   Start at  15:58:58
+   Duration  9.93s (tests 40%, transform 33%, import 17%, setup 10%)
+
+check:changed summary
+  pass  format  0.2s
+  pass  lint  0.5s
+  pass  knip 1/2  6.0s
+  pass  knip 2/2  10.0s
+  pass  graphql (apps/server)  0.4s
+  pass  typecheck (3 packages)  4.9s
+  pass  test (2 files)  11.1s
+  CI also runs: full test suites, build
+  unused patch check skipped: no dependency files changed

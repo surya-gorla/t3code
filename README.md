@@ -4,7 +4,7 @@
 
 **Code:** https://github.com/surya-gorla/t3code/tree/fix/claude-expired-wake-limit
 
-**Verified commit:** af0879d2388d2a4d63d02f69a5f41a81b938b779
+**Verified commit:** 93442614dee8fc5b0396af1b1d2a8f99c82c4683
 
 This evidence is deliberately on a separate fork branch and must NOT be merged into
 the upstream code PR. Synthetic test data and log paths have been sanitized.
@@ -15,12 +15,12 @@ the upstream code PR. Synthetic test data and log paths have been sanitized.
   continuation (logs/stale-replay-red.log).
 - Before the arrival-time guard: a new 429 that arrives after its reported reset
   is mistakenly swallowed (logs/red-fresh-rejection.log).
-- Final: all 13 targeted cases pass; reset at exact boundary or 1 ms before,
+- Final: all 15 targeted cases pass; reset at exact boundary or 1 ms before,
   independently reported and embedded reset times, successful intervening turn,
   fresh 429 and already expired buffered 429. Token usage retained.
 - Final 'vp run check:changed --concurrency 2' against origin/main e4688f7 (merge base 5e06246):
-  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 429 selected
-  tests in 2 files passed. See logs/review-overage-check-changed.log.
+  formatting, lint, Knip, GraphQL, typecheck of 3 packages, and 431 selected
+  tests in 2 files passed. See logs/review-open-root-check-changed.log.
 - A hypothetical second buffered successful wake passed on both original code
   and the fix, so the temporary duplicate regression was removed; logs retained.
 - Related PR #22998 edits this adapter's replay selection. A read-only merge-tree
@@ -54,7 +54,26 @@ merge approval remains with the maintainers.
   review-overage-green.log passes 13/13 targeted cases.
 - review-overage-check-changed.log: final vp run check:changed reports format,
   lint, both Knip checks, GraphQL, 3 affected package typechecks, and
-  **429/429 selected tests passed**.
+  **429/431 selected tests passed**.
 
 Evidence is stored only in the contributor fork. Upstream PR:
 https://github.com/pingdotgg/t3code/pull/36592.
+
+## Latest major review correction: newer wake still open
+
+- CodeRabbit's overall PR review (not an inline thread) noted that the
+  expired buffered 429 could fail a later active root during replay.
+- red-open-root-v2.log reproduces the bug before correction:
+  the later root finishes as failed instead of completed.
+- red-open-root-usage.log reproduces a second case: an empty task-lifecycle
+  result prevents the failure, but drops the earlier 429's token accounting
+  (received one token versus two).
+- The code now skips terminal settlement for the expired older 429 when a
+  newer root remains open, and carries both its segment usage and ledger
+  usage into the eventual newer root's result.
+- green-open-root-final.log confirms 15/15 targeted scenarios passed.
+- review-open-root-check-changed.log confirms format, lint, both Knip
+  checks, GraphQL, typechecks for three affected packages, and 431/431
+  selected tests across two files passed on the contributor branch.
+- The fix was pushed to existing upstream PR #36592 as commit 93442614d.
+  GitHub CI and human review remain independent merge gates.
