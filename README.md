@@ -54,7 +54,7 @@ merge approval remains with the maintainers.
   review-overage-green.log passes 13/13 targeted cases.
 - review-overage-check-changed.log: final vp run check:changed reports format,
   lint, both Knip checks, GraphQL, 3 affected package typechecks, and
-  **429/431 selected tests passed**.
+  **431/431 selected tests passed**.
 
 Evidence is stored only in the contributor fork. Upstream PR:
 https://github.com/pingdotgg/t3code/pull/36592.
