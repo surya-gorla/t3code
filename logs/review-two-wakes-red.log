@@ -1,0 +1,495 @@
+
+ RUN  v5.0.5 <HOME>/Documents/Opensource Space/t3code-36405/repo/apps/server
+
+stdout | src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts > ClaudeAdapterV2 background wake turns > replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=false weekly=false twoWakes=true)
+[14:31:10.875] ERROR (#1): Error [AssertionError]: expected true to be false
+    at <HOME>/Documents/Opensource Space/t3code-36405/repo/apps/server/src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts:15634:18 {
+  actual: true,
+  expected: false,
+  showDiff: true,
+  operator: 'strictEqual',
+  [cause]: undefined
+}
+
+ ❯ src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts (422 tests | 1 failed | 421 skipped) 30ms
+   ↓ ClaudeAdapterV2 runtime query policy (17)
+     ↓ does not treat operands after -- as SDK flags: -- --thinking-display omitted
+     ↓ does not treat operands after -- as SDK flags: --thinking-display summarized -- --thinking-display omitted
+     ↓ folds --permission-mode acceptEdits into the SDK permission mode
+     ↓ folds --dangerously-skip-permissions into the SDK permission mode
+     ↓ folds --dangerously-skip-permissions --permission-mode plan into the SDK permission mode
+     ↓ passes every --add-dir launch directory to Claude
+     ↓ gives delegated children Claude's subagent prompt cache TTL
+     ↓ makes a resumed Claude session wait for its MCP servers before the first request
+     ↓ pins Claude's auto tool search on through flag settings
+     ↓ sends the auto-compact window as the env var Claude Code prefers
+     ↓ sends a custom model named like a Claude Code alias to the API unchanged
+     ↓ projects AskUserQuestion input with question text as the answer key
+     ↓ maps canonical read-only never policy to Claude dontAsk with read-only tools
+     ↓ does not auto-allow reads for canonical restricted read-only never policy
+     ↓ maps default full-access policy to Claude bypass permissions
+     ↓ keeps approval checks when Full access must fall back to an allowed Claude mode
+     ↓ keeps approval-required mode interactive with danger-full-access sandboxing
+   ↓ ClaudeAdapterV2 MCP query overrides (3)
+     ↓ pre-approves only read-only t3-code tools in a read-only sandbox
+     ↓ invalidates live-query reuse when MCP credentials rotate
+     ↓ matches the read-only allowlist to the orchestrator toolkit annotations
+   ↓ ClaudeAdapterV2 native protocol logging (2)
+     ↓ injects thread-scoped MCP configuration without logging the credential
+     ↓ logs --settings key names without their values
+   ↓ ClaudeAdapterV2 device instructions (3)
+     ↓ gives a session with device access the device block and the ToolSearch line to load it
+     ↓ leaves the device block out without device access or without T3 tools
+     ↓ gives native subagents the device block only in a session with device access
+   ↓ ClaudeAdapterV2 context usage (1)
+     ↓ dates cache expiry from the request start, not the response end
+   ↓ ClaudeAdapterV2 approval presentation (3)
+     ↓ marks asks that full access could not auto-allow and keeps the CLI's reason
+     ↓ attributes a bypass ask to the user's ask rule when one matched
+     ↓ adds nothing to ordinary approvals outside full access
+   ↓ ClaudeAdapterV2 session permissions (3)
+     ↓ keeps explicit user refusals classified as user_reject
+     ↓ forces suggested permission updates to session scope
+     ↓ adds a whole-tool session rule when Claude offers no suggestion
+   ↓ ClaudeAdapterV2 Auto-accept edits (1)
+     ↓ asks before a command instead of allowing it
+   ↓ ClaudeAdapterV2 append-system-prompt-file launch argument (12)
+     ↓ sends append launch arguments to Claude after the T3 instructions
+     ↓ merges --settings '{"skillOverrides":{"lint":"off"},"showThinkingSummaries":false}' beneath T3's settings
+     ↓ merges --settings user-settings.json beneath T3's settings
+     ↓ reads --settings ~/.claude/settings.json from the home directory
+     ↓ reads --append-system-prompt-file ~/.claude/settings.json from the home directory
+     ↓ fails the turn before opening Claude for --append-system-prompt-file missing.md
+     ↓ fails the turn before opening Claude for --append-system-prompt-file
+     ↓ fails the turn before opening Claude for --append-system-prompt-file=
+     ↓ fails the turn before opening Claude for --append-system-prompt
+     ↓ fails the turn before opening Claude for --settings missing.json
+     ↓ fails the turn before opening Claude for --settings '{not json}'
+     ↓ fails the turn before opening Claude for --settings '{"env":{"ANTHROPIC_API_KEY":"secret-settings-key"},'
+   ↓ ClaudeAdapterV2 provider installation gate (1)
+     ↓ opens each turn's Claude process inside the installation gate
+   ↓ ClaudeAdapterV2 approval cancellation (1)
+     ↓ observes an approval signal that was already aborted
+   ↓ ClaudeAdapterV2 MCP elicitation acceptance (5)
+     ↓ answers an empty-properties form with empty content
+     ↓ picks the one-time choice however the server spells it
+     ↓ answers a persistence toggle with false
+     ↓ leaves out optional fields the card does not show
+     ↓ has no answer for URL mode or a form asking for a value
+   ↓ ClaudeAdapterV2 executable path (1)
+     ↓ follows a bare claude on Windows to the npm package executable
+   ↓ ClaudeAdapterV2 resumeThread (1)
+     ↓ fails for a transcript without messages so a fresh session replaces it
+   ↓ ClaudeAdapterV2 resume compaction (1)
+     ↓ resolves and cancels the SDK resume dialog through structured runtime input
+   ↓ ClaudeAdapterV2 attachments (12)
+     ↓ preserves retained-images with native PDFs, images, and paths on sends and steering
+     ↓ preserves retained-text with native PDFs, images, and paths on sends and steering
+     ↓ preserves same-message-images with native PDFs, images, and paths on sends and steering
+     ↓ preserves retained-documents with native PDFs, images, and paths on sends and steering
+     ↓ preserves later-images with native PDFs, images, and paths on sends and steering
+     ↓ preserves partial-images with native PDFs, images, and paths on sends and steering
+     ↓ preserves cancelled-send with native PDFs, images, and paths on sends and steering
+     ↓ preserves cancelled-steer with native PDFs, images, and paths on sends and steering
+     ↓ preserves ordinary text with native PDFs, images, and paths on sends and steering
+     ↓ preserves mid-sentence skill with native PDFs, images, and paths on sends and steering
+     ↓ preserves prompt-leading skill with native PDFs, images, and paths on sends and steering
+     ↓ preserves resumed history without persisted count… with native PDFs, images, and paths on sends and steering
+   ↓ ClaudeAdapterV2 native fork (1)
+     ↓ forks a session from its original directory after the workspace root changes
+   ↓ ClaudeAdapterV2 MCP credential channel (2)
+     ↓ commits queued delivery before interruptible protocol logging
+     ↓ sends MCP servers over stdin, not argv or the environment
+   ↓ ClaudeAdapterV2 native session identity (3)
+     ↓ resumes the native session on a fresh session instance when prior provider turns exist
+     ↓ creates a fresh native session despite earlier provider-thread turns
+     ↓ resumes an imported native session on its first T3 turn
+   ❯ ClaudeAdapterV2 background wake turns (348)
+     ↓ resumes the session a /clear selected after the Claude process is replaced
+     ↓ keeps attachment reservations across compaction: release-after boundary
+     ↓ keeps attachment reservations across compaction: cancel-after boundary
+     ↓ keeps attachment reservations across compaction: release-before boundary
+     ↓ keeps attachment reservations across compaction: resume-pending boundary
+     ↓ restores retained attachment counters after resume
+     ↓ restores retained attachment counters after legacy
+     ↓ restores retained attachment counters after compacted
+     ↓ restores retained attachment counters after preserved-segment
+     ↓ restores retained attachment counters after preserved-messages
+     ↓ restores retained attachment counters after failed
+     ↓ restores retained attachment counters after stopped
+     ↓ restores retained attachment counters after fork-bytes
+     ↓ restores retained attachment counters after fork-pages
+     ↓ Claude settings restrictions (6)
+       ↓ resolves cached managed policy from the configured home through the real SDK
+       ↓ drops false bypass switches from --settings before they reach the SDK
+       ↓ asks before restricted Full access tools and follows policy across turns
+       ↓ combines a normalized custom home with project policy without reading the ambient user tier
+       ↓ distinguishes missing custom settings from unreadable, malformed, or unresolved policy
+       ↓ pins tool search on when the user's Claude settings choose auto
+     ↓ Plan-mode tool approval (5)
+       ↓ asks before Edit in auto Plan, then respects accept
+       ↓ asks before Bash in full-access Plan, then respects cancel
+       ↓ denies Plan writes without asking when approvals are never allowed
+       ↓ returns approval feedback to the requesting tool without sending a parent prompt
+       ↓ still captures ExitPlanMode when Plan approvals are never allowed
+     ↓ carries earlier user-only skill instructions on sends and steering with attachments
+     ↓ keeps a /goal that mentions a skill as one native goal command
+     ↓ warns that a steer Claude never read be…
+     ↓ does not warn about a steer on a CLI th…
+     ↓ does not warn about a steer Claude read…
+     ↓ keeps a steer pending until Claude starts it
+     ↓ settles a turn whose result echoes only a steer before the offer returns
+     ↓ dispatches only skills from the user's text, not from inline handoff history
+     ↓ keeps late MCP display metadata with {"isError":false,"title":"Check weather"}
+     ↓ keeps late MCP display metadata with {"isError":true,"title":"Check weather"}
+     ↓ keeps late MCP display metadata with {"isError":false}
+     ↓ renders a Claude MCP tool's ui:// resource as an app and serves its tool calls
+     ↓ keeps a plain MCP tool row when its ui:// resource cannot be read
+     ↓ keeps a plain MCP tool row when two Claude MCP servers share its tool n…
+     ↓ keeps a plain MCP tool row when its own output carries an app reference
+     ↓ applies Claude's permission rules to MCP app calls with no permission rules
+     ↓ applies Claude's permission rules to MCP app calls with an exact ask rule
+     ↓ applies Claude's permission rules to MCP app calls with a tool glob ask rule
+     ↓ applies Claude's permission rules to MCP app calls with an all-servers ask rule
+     ↓ applies Claude's permission rules to MCP app calls with an exact deny rule
+     ↓ applies Claude's permission rules to MCP app calls with a server-wide deny rule
+     ↓ applies Claude's permission rules to MCP app calls with a server wildcard deny rule
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule with a server-part wildcard
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule naming a prefix of the serv…
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule for this tool on a server a…
+     ↓ applies Claude's permission rules to MCP app calls with a server-wide deny rule for a server wh…
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule naming the first part of a …
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule whose server wildcard spans…
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule with a parenthesized specif…
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule a managed policy switched o…
+     ↓ applies Claude's permission rules to MCP app calls with a server-wide deny rule for an alias co…
+     ↓ applies Claude's permission rules to MCP app calls with a deny rule for this tool on an alias c…
+     ↓ applies Claude's permission rules to MCP app calls with an ask rule naming another tool, which …
+     ↓ applies Claude's permission rules to MCP app calls with a deny wildcard that may match only a s…
+     ↓ applies Claude's permission rules to MCP app calls with an ask rule for every tool
+     ↓ applies Claude's permission rules to MCP app calls with rules that cannot cover an MCP tool
+     ↓ applies Claude's permission rules to MCP app calls with permission rules that cannot be read
+     ↓ refuses app requests Claude Code could route to an overlapping server
+     ↓ refuses an app call whose Claude tool name matches two tools on its server
+     ↓ keeps a plain MCP tool row when reading its ui:// resource times out
+     ↓ keeps a plain MCP tool row when the Claude CLI lacks MCP Apps support
+     ↓ sends the model id Claude Code reported for the selected catalog model
+     ↓ keeps the reported model id when a running turn is steered or changes effort
+     ↓ settles an advisor call from its result content: failed
+     ↓ settles an advisor call from its result content: completed
+     ↓ sends Claude Code's reported model id only where the cwd resolves it as the probe did
+     ↓ MCP elicitations (9)
+       ↓ shows an approval-only form and accepts only after Approve
+       ↓ answers decline with that action
+       ↓ answers cancel with that action
+       ↓ declines an unsupported acceptAlways decision
+       ↓ answers a repeated prompt from a session grant without a card
+       ↓ declines URL and value forms without a card
+       ↓ cancels an already-aborted request without a card
+       ↓ withdraws an open card when the SDK cancels while the session continues
+       ↓ cancels an open card when the session stops
+     ↓ applies model, effort and Fast changes to a process running a background shell, but not thinking or a cleared effort
+     ↓ applies a model change sent with a steer to the running turn
+     ↓ fails a model-changing steer when the turn ends during the selection change
+     ↓ re-sends the model on the turn after a live selection change fails
+     ↓ projects Claude thinking blocks when completed
+     ↓ projects Claude thinking blocks when interrupted
+     ↓ streams Claude assistant text deltas before the completed snapshot
+     ↓ preserves native tool non-execution metadata cancelled without inferring a denial from text
+     ↓ preserves native tool non-execution metadata interrupted without inferring a denial from text
+     ↓ preserves native tool non-execution metadata denied without inferring a denial from text
+     ↓ preserves native tool non-execution metadata permission_denied without inferring a denial from text
+     ↓ preserves native tool non-execution metadata undefined without inferring a denial from text
+     ↓ completes a turn after the resume dialog without a failed tool row
+     ↓ handles aborted_tools (steered=false, exits=false)
+     ↓ handles aborted_tools (steered=true, exits=false)
+     ↓ handles aborted_tools (steered=true, exits=true)
+     ↓ handles aborted_streaming (steered=false, exits=false)
+     ↓ handles aborted_streaming (steered=true, exits=false)
+     ↓ handles aborted_streaming (steered=true, exits=true)
+     ↓ announces usage-limit pauses once per window and again on a new turn
+     ↓ keeps a later future-window event-supplied Claude reset over the embedded reset
+     ↓ reports terminal API error text for an unflagged result with surrounding wh…
+     ↓ reports terminal API error text for a secret crossing the truncation bounda…
+     ↓ reports terminal API error text for ordinary assistant text
+     ↓ reports terminal API error text for a listed non-diagnostic error
+     ↓ reports terminal API error text for an HTTP 529 overload
+     ↓ reports terminal API error text for an HTTP 429 rate limit
+     ↓ reports terminal API error text for a different terminal reason
+     ↓ reports terminal API error text for a model version error rewritten by a cu…
+     ↓ reports terminal API error text for a model version error without a custom …
+     ↓ reports terminal API error text for a model version error from a Claude Cod…
+     ↓ names an expired Claude login instead of the terminal API error
+     ↓ shows a 403 permission error instead of the login hint
+     ↓ rolls back the first run of a fork with inherited head
+     ↓ rolls back the first run of a fork without recorded head
+     ↓ rolls back the first run of a ordinary thread
+     ↓ rolls back to the main-thread assistant message when a subagent frame comes last
+     ↓ an interrupted turn after a rollback stops resuming at the rolled-back head
+     ↓ an interrupted turn with no assistant output keeps the rolled-back head
+     ↓ never records a subagent uuid for a turn with no main-thread assistant message
+     ↓ fails a /compact the usage limit stopped
+     ↓ completes an unlimited failed /compact
+     ↓ completes a successful limited /compact
+     ↓ completes a failed automatic compaction
+     ↓ keeps an unreported /compact failure's reason on the compaction, not as a reply
+     ↓ classifies retried terminal API failures after parent limit
+     ↓ classifies retried terminal API failures after parent limit then nested response
+     ↓ classifies retried terminal API failures after nested limit
+     ↓ classifies retried terminal API failures after parent limit then parent response
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 4m 6s
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 1h 2m 3s
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 7s
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 0s
+     ↓ recovers wrapped gateway limits with status 503 and cooldown unknown
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 999999999999999999999999h
+     ↓ recovers wrapped gateway limits with status 503 and cooldown 4m 6s
+     ↓ recovers wrapped gateway limits with status 401 and cooldown 4m 6s
+     ↓ keeps a gateway's reset on a direct 429 with cooldown ' (reset after 1h2m3s)'
+     ↓ keeps a gateway's reset on a direct 429 with cooldown ' (reset after 4m 6s) (last error: rate …'
+     ↓ keeps a gateway's reset on a direct 429 with cooldown ''
+     ↓ keeps the measured context when a usage limit ends the turn
+     ↓ reports context from final stream usage when the request starts at zero
+     ↓ measures a model outside the catalog against the window Claude reports
+     ↓ asks Claude for suggestions only on threads a person drives (root)
+     ↓ asks Claude for suggestions only on threads a person drives (mcp)
+     ↓ asks Claude for suggestions only on threads a person drives (subagent)
+     ↓ asks Claude for suggestions only on threads a person drives (remote)
+     ↓ merges cumulative stream usage into the message_start counts
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-sonnet-4-6
+     ↓ ignores stale snapshots after compaction and reports threshold 150000 for claude-sonnet-4-6
+     ↓ ignores stale snapshots after compaction and reports threshold 200000 for claude-sonnet-4-6
+     ↓ ignores stale snapshots after compaction and reports threshold 650000 for claude-sonnet-4-6
+     ↓ ignores stale snapshots after compaction and reports threshold 650000 for uncatalogued-model
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold 300000 for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold  for claude-opus-5-5
+     ↓ ignores stale snapshots after compaction and reports threshold 400000 for claude-opus-5-5
+     ↓ reports the settings directory of a reused Claude query
+     ↓ Claude Stop-hook notices: hides a passive summary
+     ↓ Claude Stop-hook notices: shows a blocking notice
+     ↓ Claude Stop-hook notices: shows a warning
+     ↓ shows a hook-dropped Claude prompt once and skips info-level lines
+     ↓ runs native compaction and keeps its context watermark separate from billed usage
+     ↓ shows automatic compaction before its boundary and completes the same item
+     ↓ settles unfinished compaction before the result terminal receipt
+     ↓ settles unfinished compaction before the interrupt terminal receipt
+     ↓ settles unfinished compaction before the interrupt_aborted terminal receipt
+     ↓ settles unfinished compaction before the query_exit terminal receipt
+     ↓ names the notebook a Claude NotebookEdit changed
+     ↓ renegotiates auto only when switching API models after fallback to default: claude-haiku-4-5-20251001
+     ↓ renegotiates auto only when switching API models after fallback to default: claude-sonnet-4-6
+     ↓ preserves typed Claude plans and todos through generic tool completion
+     ↓ persists a todo_list from inline Claude task-tool frames
+     ↓ projects TaskCreate and TaskUpdate into one plan per turn and supersedes it later
+     ↓ removes deleted tasks without resurrecting them on later updates or turns
+     ↓ recovers persisted tasks on the first TaskUpdate after restart
+     ↓ recovers persisted tasks on the first TaskCreate after restart
+     ↓ publishes an empty task list when the first TaskUpdate after restart deletes the last task
+     ↓ replaces task state with TaskList, including an empty list
+     ↓ applies subagent task tools to the parent turn's shared task list
+     ↓ recovers persisted tasks when a subagent's TaskList comes first
+     ↓ does not associate structured task output with multiple tool results
+     ↓ resolves API retries on resumed assistant activity
+     ↓ fails a success-shaped Claude result with api_error
+     ↓ fails a success-shaped Claude result with overloaded_status
+     ↓ classifies blocking_limit by its rate-limit evidence (allowed window)
+     ↓ classifies blocking_limit by its rate-limit evidence (rejected window)
+     ↓ uses task_started as an incremental roster fallback, keeps its tool call, and clears internal work on empty snapshot
+     ↓ holds only the background tasks the agent marks awaited, until they end
+     ↓ keeps a running Claude monitor typed after many newer monitors end
+     ↓ tags a Claude Monitor event wake as a monitor update (it ends with its own result, later wake ends with its own result)
+     ↓ tags a Claude Monitor event wake as a monitor update (it ends with its own result, later wake is absorbed by a user turn)
+     ↓ tags a Claude Monitor event wake as a monitor update (it is absorbed by a user turn, later wake is absorbed by a user turn)
+     ↓ a fired ScheduleWakeup holds completion only while its wake turn reschedules (rescheduled=false, fired after 60 seconds)
+     ↓ a fired ScheduleWakeup holds completion only while its wake turn reschedules (rescheduled=true, fired after 60 seconds)
+     ↓ a fired ScheduleWakeup holds completion only while its wake turn reschedules (rescheduled=false, fired after 30 seconds)
+     ↓ a user turn before the wakeup fires keeps the pending wakeup's hold
+     ↓ a task notification waking Claude just before the wakeup keeps its hold
+     ↓ an early wakeup after an idle task notification releases its hold (empty result: true)
+     ↓ an early wakeup after an idle task notification releases its hold (empty result: false)
+     ↓ a failed turn on a live Claude process keeps the pending wakeup's hold
+     ↓ ScheduleWakeup stop:true releases the pending wakeup's hold
+     ↓ Stop on a thread waiting for a ScheduleWakeup closes Claude and drops the hold
+     ↓ tails foreground Bash output under the physical cwd the query launched in
+     ↓ lets the native SDK acknowledge Stop before closing its own query
+     ↓ bounds an unacknowledged native Stop and settles its turn once
+     ↓ preserves settled background work until an explicit stop
+     ↓ Stop with session teardown before Stop does not fail on the closed CLI
+     ↓ Stop with session teardown during Stop's interrupt write does not fail on the closed CLI
+     ↓ a settled Stop leaves a turn that replaced the closing process alone
+     ↓ fails a turn whose Claude query ends before its first frame
+     ↓ clears the replaced sibling native thread roster when openQuery switches processes
+     ↓ keeps a queued wake turn's tool callback with its continuation in full-access mode
+     ↓ keeps a queued wake turn's tool callback with its continuation in approval-required mode
+     ↓ stores a Bash result's stdout and stderr as command output
+     ↓ stores the diff panel patch for an Edit
+     ↓ stores the diff panel patch for a Write that creates a file
+     ↓ stores the diff panel patch for a Write that creates an empty file
+     ↓ answers an approval a held wake turn raises without waiting for the echo
+     ↓ closes an approval card when Claude withdraws its request
+     ↓ closes a question card when Claude withdraws its request
+     ↓ releases output held for a prompt echo when the stream ends
+     ↓ fails a prompt Claude completes without starting a turn for it
+     ↓ fails a turn whose mod requests focus f…
+     ↓ keeps a turn running beside a passive m…
+     ↓ runs a follow-up in a fresh query while the mod-blocked query is closing
+     ↓ keeps a started prompt running until its result
+     ↓ buffers wake output and requests a single continuation run
+     ↓ starts the wake run when Claude opens the wake turn, before its output
+     ↓ offers a later wake after an earlier wake's continuation dispatch failed
+     ↓ keeps a newer wake's output when a stale continuation request is cleared
+     ↓ offers the next wake when a cancelled wake's release arrives after it opened
+     ↓ does not offer a wake again when it is cancelled before its first root frame
+     ↓ offers a later task's wake when a cancelled wake never opens
+     ↓ does not replay a subagent that finished inside a cancelled wake (ended by notification, cancelled after its result)
+     ↓ does not replay a subagent that finished inside a cancelled wake (ended by tool result, cancelled after its result)
+     ↓ does not replay a subagent that finished inside a cancelled wake (ended by tool result, cancelled while the subagent ran)
+     ↓ offers a cancelled wake once when an empty lifecycle result precedes its turn
+     ↓ does not offer a cancelled wake again for its trailing empty lifecycle result
+     ↓ offers a subagent's wake that arrives behind a cancelled wake (notified before the cancelled wake's result)
+     ↓ offers a subagent's wake that arrives behind a cancelled wake (notified after the cancelled wake's result)
+     ↓ keeps an exited background command on the roster until its wake run starts (empty level none notification)
+     ↓ keeps an exited background command on the roster until its wake run starts (empty level before notification)
+     ↓ keeps an exited background command on the roster until its wake run starts (empty level after notification)
+     ↓ keeps an exited background command on the roster until its wake run starts (empty level sibling notification)
+     ↓ replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=false newerTurn=false weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=false arrivedAfterReset=false expired=false newerTurn=false weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=false weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=false arrivedAfterReset=false expired=true newerTurn=false weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=true weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=true expired=false newerTurn=false weekly=false twoWakes=false)
+     ↓ replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=false weekly=true twoWakes=false)
+     × replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=false weekly=false twoWakes=true) 29ms
+     ↓ dates a buffered wake gateway limit from its arrival, not the continuation replay
+     ↓ leaves buffered wake messages for the continuation queued behind a user turn
+     ↓ settles a continuation whose wake turn a user turn absorbed
+     ↓ offers a later wake when a wake a user turn absorbed is cancelled before that turn ends
+     ↓ offers a later wake when a wake a user turn absorbed is cancelled after that turn ends
+     ↓ ignores a zero-turn task-notification origin result during a normal user turn
+     ↓ emits one interrupted terminal for a positive task-notification result racing interrupt
+     ↓ settles a continuation turn immediately when no wake output is buffered
+     ↓ keeps the wake run open for the turn Claude opens right after an empty one
+     ↓ keeps the wake run open for the turn Claude opens right after a quota failure and an empty one
+     ↓ ends a subagent whose process a Stop closed while a new turn replaced it
+     ↓ stops a subagent whose process a Stop closed while a new turn replaced it
+     ↓ leaves a stopping replacement's subagent to that replacement's exit
+     ↓ streams a background subagent's work while the root turn is idle
+     ↓ reopens a completed background subagent that resumes while the root is idle
+     ↓ keeps a nested subagent's launch in order while the root turn is idle
+     ↓ ends an earlier turn's nested subagent while the root turn is idle
+     ↓ keeps an idle-launched nested subagent completed through a sibling's wake
+     ↓ settles a plain background subagent and its open call on exit after the root turn completes
+     ↓ settles a plain background subagent and its open call on Stop after the root turn completes
+     ↓ keeps a subagent call's result when the CLI exits before the drain (result before the nested launch's)
+     ↓ keeps a subagent call's result when the CLI exits before the drain (result after the nested launch's)
+     ↓ ends a subagent's SendMessage with its result when the CLI exits while the resume waits
+     ↓ keeps a subagent's frames in order when a late progress names its tool use while the root is idle
+     ↓ keeps a subagent's frames in order when a late progress names its tool use while the root is idle behind another subagent's start without one
+     ↓ keeps a subagent's frames in order when a late progress names its tool use while the root is idle when another subagent's start without one arrives between its frames
+     ↓ holds subagent frames that precede task_started and shows its result once
+     ↓ drops an idle start superseded by live completion, later resume false
+     ↓ drops an idle start superseded by live completion, later resume true
+     ↓ retains native confirmation after the synchronous Agent tool result
+     ↓ stops one native subagent while its sibling keeps running, owner settled false, outcome stopped
+     ↓ stops one native subagent while its sibling keeps running, owner settled true, outcome stopped
+     ↓ stops one native subagent while its sibling keeps running, owner settled false, outcome completed
+     ↓ records the subagent model from requested without inheriting the parent override
+     ↓ records the subagent model from observed-before without inheriting the parent override
+     ↓ records the subagent model from observed-after without inheriting the parent override
+     ↓ records the subagent model from synthetic-after without inheriting the parent override
+     ↓ records the subagent model from inherit without inheriting the parent override
+     ↓ records the subagent model from unknown without inheriting the parent override
+     ↓ records a forked skill's model from its transcript instead of the parent's
+     ↓ sends Ultracode with any effort on a model from the custom model
+     ↓ sends Ultracode with any effort on a model from the downloaded catalog
+     ↓ resolves a subagent's model and effort against the instance's custom models
+     ↓ records only explicit effort for nested subagents
+     ↓ extracts text from direct content-block…
+     ↓ drops Claude Code's tools-used note fro…
+     ↓ keeps a foreground fork running past the placeholder result for its own launch
+     ↓ releases the idle pin when a post-settle subagent stops without completing
+     ↓ re-opens a resumed subagent whose task_started races past settle
+     ↓ resets Waiting roster and wake eligibility when the CLI process is replaced
+     ↓ preserves buffered local_bash notification classification across model/policy query replacement
+     ↓ refuses a thinking change that would kill a running background subagent
+     ↓ keeps the live process when its replacement cannot read the append file
+     ↓ keeps the process and its roster when a model change meets a running background shell
+     ↓ names the signal that killed the Claude process on the failed turn
+     ↓ keeps a workflow running after its Agent launch reply without an async flag
+     ↓ keeps a workflow running after its Workflow launch reply without an async flag
+     ↓ marks a workflow coordinator's script prompt and leaves a subagent brief plain
+     ↓ stops only a live workflow task and waits for its stopped notification
+     ↓ projects each workflow member as its own subagent thread
+     ↓ projects workflow member threads after resuming a restarted session
+     ↓ orders root result arriving during workflow transcript replay
+     ↓ orders resume after root result arriving during workflow transcript replay
+     ↓ orders completion before buffered start arriving during workflow transcript replay
+     ↓ preserves buffered workflow outcomes when interrupted during replay
+     ↓ stops the run's live workflow after root result api_error, continuation=false, pending Stop=false
+     ↓ stops the run's live workflow after root result aborted_streaming, continuation=false, pending Stop=false
+     ↓ stops the run's live workflow after root result api_error, continuation=true, pending Stop=false
+     ↓ stops the run's live workflow after root result api_error, continuation=false, pending Stop=true
+     ↓ stops the run's live workflow after root result aborted_streaming, continuation=false, pending Stop=true
+     ↓ clears workflow member metadata only after a successful transcript read
+     ↓ answers settled workflow members from a transcript, or the snapshot excerpt
+     ↓ streams a running workflow member's conversation from its transcript
+     ↓ interrupts the open tool calls of a workflow member that failed
+     ↓ reads a settled workflow member's transcript to its end past the read cap
+     ↓ re-reads a workflow member's transcript after a restart without new items
+     ↓ native goals (6)
+       ↓ tracks a /goal through unmet checks until Claude stops on its own
+       ↓ defers goal completion until an ambient subagent finishes and Claude checks again
+       ↓ leaves the goal complete with a running mcp_task task
+       ↓ leaves the goal active with a running undefined task
+       ↓ keeps a goal active after a command turn with no model output
+       ↓ keeps the CLI's goal confirmation out of the conversation
+   ↓ ClaudeAdapterV2 query message stream (1)
+     ↓ closes the query when the message stream is interrupted mid-read
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts > ClaudeAdapterV2 background wake turns > replays a rejected wake rate limit only while it is current (event=true arrivedAfterReset=false expired=true newerTurn=false weekly=false twoWakes=true)
+AssertionError: expected true to be false
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/orchestration-v2/Adapters/ClaudeAdapterV2.test.ts:15634:18
+    15632|         if (expired && !weeklyStillActive) {
+    15633|           assert.equal(terminal.status, "completed");
+    15634|           assert.isFalse(
+       |                  ^
+    15635|             harness.events.some(
+    15636|               (event) =>
+ ❯ ~effect/Effect/successCont ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/effect.ts:1496:28
+ ❯ ~effect/Effect/evaluate ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/core.ts:586:30
+ ❯ ~effect/Effect/evaluate ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/Queue.ts:2521:86
+ ❯ FiberImpl.runLoop ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/effect.ts:709:43
+ ❯ FiberImpl.evaluate ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/effect.ts:637:23
+ ❯ FiberImpl.evaluate ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/effect.ts:626:29
+ ❯ Object.resume ../../node_modules/.pnpm/effect@4.1.3/node_modules/effect/src/internal/effect.ts:1224:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 421 skipped (422)
+   Start at  14:31:08
+   Duration  2.00s (transform 52%, import 42%, setup 4%, tests 2%)
